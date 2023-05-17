@@ -1,0 +1,29 @@
+{% extends 'enroll/base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="container-fluid">
+    <div class="row">
+        {% if arr|length > 1 %}
+        <div>
+            <div class="container-fluid">
+                <div class="row">
+                    <h1 class="text-center">Product Recommended for you</h1>
+                    {% for i in arr %}
+                    <div class="col-4 my-2">
+                        <a class="mx-1" href="{% url 'productdetails' i.id %}"><img style="height:300px; width:300px;"
+                                src="{{i.Product_image.url}}" alt=""></a>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        {% else %}
+        <div>
+            <h1>Nothing is Recommended for you</h1>
+        </div>
+        {% endif %}
+
+    </div>
+</div>
+{% endblock content %}

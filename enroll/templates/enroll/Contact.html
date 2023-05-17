@@ -1,0 +1,33 @@
+{% extends 'enroll/base.html' %}
+{% load static %}
+{% block content %}
+
+<!-- <div style="margin:80px">
+    <h1>Contact</h1>
+    <h4>Contact us directly if you have any questions</h4>
+    <form method="post">
+    {% csrf_token %}
+        {{form.as_p}}
+        <button type="submit">Submit</button>
+    </form>
+</div> -->
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-2"></div>
+        <div class="col-6 text-center">
+            <h1 class="text-center">Contact</h1>
+            <h4>Contact us directly if you have any questions</h4>
+            <form method="post">
+            {% csrf_token %}
+                {{form.as_p}}
+                <button class="btn btn-primary" type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock content %}
+
+
+

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link src="{% static 'enroll/css/fontawesom.css' %}">
+    </link>
+    <link rel="stylesheet" href="{% static 'enroll/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'enroll/css/home.css'%}">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+         crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Amagon_clone</title>
+</head>
+
+<body id="main">
+    <div class="container-fluid">
+        <div class="row">
+            {% block nav %}
+            {% include 'enroll/nav.html' %}
+            {% endblock nav %}
+            {% block content %}{% endblock content %}
+            
+
+            <footer>
+
+                <div class="container-fluid wrap">
+                    <div class="row">
+
+
+                        <div class="col-3 my-2">
+                            <div class="footer-widget about-widget">
+                                <h2 class="widget-tittle">About</h2>
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing
+                                    elit. Sed, suscipit.</p>
+        
+                                <div class="footer_cards">
+                                    <i class="fa-brands fa-cc-mastercard"></i>
+                                    <i class="fa-brands fa-cc-paypal"></i>
+                                    <i class="fa-brands fa-cc-amex"></i>
+                                    <i class="fa-brands fa-cc-visa"></i>
+                                    <i class="fa-brands fa-cc-discover"></i>
+                                </div>
+                                <p><span><i class="fa-solid fa-lock"></i></span> Secure online Payment</p>
+        
+                            </div>
+                        </div>
+
+
+                        <div class="col-3 my-2">
+                            <div class="footer-widget categories-widget">
+                                <h2 class="widget-tittle">Categories</h2>
+        
+                                <ul>
+                                    <li><a href="#">Clothing</a></li>
+                                    <li><a href="#">Lingerie</a></li>
+                                    <li><a href="#">Footwear</a></li>
+                                    <li><a href="#">Hand Bag</a></li>
+                                    <li><a href="#">Jwellery</a></li>
+                                    <li><a href="#">Belt</a></li>
+                                </ul>
+                            </div>
+                        </div>
+        
+                        <div class="col-3 my-2">
+                            <div class="footer-widget information-widget">
+                                <h2 class="widget-tittle">Informations</h2>
+                                <ul>
+                                    <li><a href="{% url 'about' %}">About Us</a></li>
+                                    <li><a href="{% url 'contact' %}">Contact Us</a></li>
+                                    <li><a href="#">Term & Condition</a></li>
+                                    <li><a href="#">Return & Exchange</a></li>
+                                    <li><a href="#">Shipping & Delivery</a></li>
+                                    <li><a href="#">Private Policy</a></li>
+                                </ul>
+                            </div>
+                        </div>
+        
+        
+                        <div class="col-3 my-2">
+                            <div class="footer-widget">
+                                <h2 class="widget-tittle">Contact</h2>
+        
+                                <div class="contact-address">
+                                    <i class="fa-solid fa-location-dot"></i>  Address :  NH-12 (Old NH-34) Simhat, West Bengal,  India. Pin-Code : 741249
+                                </div>
+        
+                                <div class="contact-number">
+                                    <i class="fa-solid fa-phone"></i> Phone : +91 6200894044
+                                </div>
+        
+                                <div class="contact-email">
+                                    <i class="fa-solid fa-envelope"></i> Email : amankumarshah8102@gmail.com
+                                </div>
+        
+                                <div class="social-widget">
+                                    <a href="#"> <i class="fa-brands fa-square-facebook"></i></a>
+                                    <a href="#"><i class="fa-brands fa-google-plus-g"></i></a>
+                                    <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+                                    <a href="#"><i class="fa-brands fa-square-youtube"></i></a>
+                                    <a href="#"><i class="fa-brands fa-square-twitter"></i></a>
+                                </div>
+        
+        
+        
+                            </div>
+        
+                        </div>
+        
+                    </div>
+        
+                </div>
+        
+        
+                <!-- <div class="container-fluid">
+                    <div class="row">
+                        <div class="copyright">
+                            <div class="container">
+                                <hr width="500px">
+                                <p>Copyright 
+                                    2023 All rights reserved | Design made with <i class="fa-solid fa-heart"></i> by <a href="#" target="_blank">UI DEV</a> </p>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+
+                <div class="copyright">
+                    <div class="copycontainer">
+                        <hr>
+                        <p>Copyright 
+                            2023 All rights reserved | Design made with <i class="fa-solid fa-heart"></i> by <a href="#" target="_blank">UI AR</a> </p>
+                    </div>
+                </div>
+
+            </footer>
+        </div>
+    </div>
+    {% comment %}
+    <script src="{% static 'enroll/js/jquery.js' %}"></script>
+    {% endcomment %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="{% static 'enroll/js/popper.js' %}"></script>
+    <script src="{% static 'enroll/js/fontawesom.js' %}"></script>
+    <script src="{% static 'enroll/js/bootstrap.js' %}"></script>
+    <script src="{% static 'enroll/js/main.js' %}"></script>
+</body>
+
+</html>

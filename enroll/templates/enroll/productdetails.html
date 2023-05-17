@@ -1,0 +1,72 @@
+{% extends 'enroll/base.html' %}
+{% load static %}
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-4 my-4 text-center">
+            <h1 class="text-center">{{product.title}}</h1>
+            <hr>
+            <img style="width:400px; height:300px;" src="{{product.Product_image.url}}" alt="">
+        </div>
+        <div class="col-4 offset-2 my-4">
+            <h1>Product_name:-{{product.title}}</h1>
+            <hr>
+            <h4>Rs:-{{product.Selling_price}}<del class="mx-2">{{product.Discount_price}}</del></h4>
+            <h2>Brand:-{{product.Brand}}</h2>
+            <p>{{product.Description}}</p>
+            {% if request.user.is_authenticated %}
+                {% if item_already_in_cart %}
+                    <a class="btn btn-danger shadow px-2 py-2" href="{% url 'show_cart' %}">Go_to_cart</a>
+                    <a class="btn btn-danger shadow px-2 py-2" href="{% url 'cart' %}"> Buy_now </a>
+                {% else %}
+                    <form action="/cart" class="d-inline">
+                        <input type="hidden" value={{product.id}} id="prod_id" name="prod_id">
+                        <button class="btn btn-secondary shadow px-2 py-2">Add_Cart</button>
+                        </input>
+                    </form>
+                    <a class="btn btn-danger shadow px-2 py-2" href="{% url 'cart' %}"> Buy_now </a>
+                {% endif %}
+            {% else %}
+                <a class="btn btn-danger shadow px-2 py-2" href="{% url 'login' %}">LOGIN_FIRST</a>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid my-4">
+    <div class="row">
+        <div class="col-6 offset-2">
+            <h1 class="text-success">Review of Product</h1>
+            <div class="col-8 my-4">
+                {% for Review in Review %}
+                <div class="card shadow px-3 py-4 mx-2" style="width:400px; float:left;">
+                    <span>Name:-{{Review.Name}}</span>
+                    <span>Rating:-{{Review.Rating}}</span>
+                    <span>Description:-{{Review.Description}}</span>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container-fluid my-4">
+    <div class="row">
+        <div class="col-6 offset-2">
+            <h1 class="text-primary">GIVE THE RATING OF PRODUCT</h1>
+            <div class="card shadow px-3 py-4 mx-2">
+                <form action="" method="POST">
+                    {% csrf_token %}
+                    {% for f in form %}
+                    {{f.label_tag}}
+                    {{f}}<br><br>
+                    {% endfor %}
+                    <input class="btn btn-primary text-center" type="submit">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

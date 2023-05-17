@@ -1,0 +1,10 @@
+<div class="card shadow px-3 py-4 mx-2">
+    <form action="" method="POST">
+      {% csrf_token %}
+      {% for f in form %}
+        {{f.label_tag}}
+        {{f}}<br><br>
+        {% endfor %}
+        <input class="bg-primary"  type="submit">
+    </form>
+</div>
