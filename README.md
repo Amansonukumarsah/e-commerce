@@ -1,4 +1,4 @@
-# **Amansonukumarsah E-commerce Clone**
+# ** E-commerce Clone**
 
 ## **Overview**
 
