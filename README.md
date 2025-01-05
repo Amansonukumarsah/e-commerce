@@ -1,8 +1,8 @@
-# ** E-commerce Clone**
+# **E-commerce Clone**
 
 ## **Overview**
 
-The ** E-commerce Clone** is a Django-based project designed to simulate the functionality of an online shopping platform. This project provides a robust backend for managing users, products, reviews, and orders, along with a dynamic frontend built using Django templates, CSS, and JavaScript. The platform incorporates essential e-commerce features like user authentication, product categorization, shopping cart functionality, and secure password management.
+The **E-commerce Clone** is a Django-based project designed to simulate the functionality of an online shopping platform. This project provides a robust backend for managing users, products, reviews, and orders, along with a dynamic frontend built using Django templates, CSS, and JavaScript. The platform incorporates essential e-commerce features like user authentication, product categorization, shopping cart functionality, and secure password management.
 
 The project aims to serve as a starting point for building fully functional e-commerce websites and is an excellent practice project for learning Django's capabilities, including its ORM, forms, authentication, and template rendering.
 
